@@ -1,1 +1,3 @@
 # tipos de archivos que no seran desplegados
+# Ignorar carpetas de dependencias (Node.js)
+node_modules/
