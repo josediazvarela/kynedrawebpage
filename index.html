@@ -7,7 +7,7 @@
   <script src="/_sdk/element_sdk.js"></script>
   <link rel="stylesheet" href="./css/output.css">
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   <style>
         * {
             margin: 0;
@@ -403,6 +403,22 @@
             color: #00d4ff;
         }
 
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin-right: 1rem;
+            transition: all 0.3s ease;
+            opacity: 0.85;
+        }
+
+        .social-link:hover {
+            opacity: 1;
+            transform: scale(1.15);
+        }
+
         .contact-badge {
             display: inline-block;
             background: rgba(30, 90, 150, 0.1);
@@ -597,14 +613,6 @@
 #contactModal .form-group label::after {
     color: #fbbf24;  /* Amarillo brillante para el asterisco si lo agregas */
 }
-
-
-
-
-
-
-
-
         @keyframes slideUp {
             from { transform: translateY(50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
@@ -787,26 +795,22 @@
             }
         }
     </style>
-  <style>body { box-sizing: border-box; }</style>
-  <!-- <script src="/_sdk/data_sdk.js" type="text/javascript"></script> -->
+  <style>body { box-sizing: border-box; }</style><!-- <script src="/_sdk/data_sdk.js" type="text/javascript"></script> -->
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body>
   <div class="page-wrapper">
-   
-    <header>
-        <div class="header-container">
-        <div class="logo-section">
-            <img src="./images/logo.jpg" alt="Kynedra Logo" class="company-logo">
-        </div>
-        <nav class="nav-links">
-        <a href="#dba">Database Administration</a> 
-        <a href="#analytics">Data Analytics</a> 
-        <a href="#qa">QA Services</a> 
-        <a href="#contacto" class="cta-primary">Contacto</a>
-        </nav>
-        </div>
-    </header>
-
+   <header>
+    <div class="header-container">
+     <div class="logo-section">
+      <img src="./images/logo.jpg" alt="Kynedra Logo" class="company-logo">
+     </div>
+     <nav class="nav-links">
+      <a href="#dba">Database Administration</a> <a href="#analytics">Data Analytics</a> <a href="#qa">QA Services</a> <a href="#contacto" class="cta-primary">Contacto</a>
+     </nav>
+    </div>
+   </header>
    <section class="hero">
     <h1>Consulting en soluciones integrales en gestión de data y calidad de software tanto en entornos locales como en la nube</h1>
     <p class="hero-slogan" style="color: #f0f8ff;">Where Data Architecture, Quality, and Intelligence Converge into Reliable Outcomes.</p>
@@ -862,25 +866,35 @@
         <strong>Headquarters:</strong><br>
          +1 650.850.9396<br><small>(WA/DirectLine)</small>
        </div>
+       <!--
        <div class="contact-badge">
         <strong>Home Office:</strong><br>
          +593.888.888.888<br><small>(WA/DirectLine)</small>
        </div>
-      </div><!-- Email & Web -->
+        -->
+       <div style="margin-top:15px;"><a href="https://bit.ly/Contactame-Ahora-WhatsApp" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:8px 16px; background:#25D366; color:#fff; border-radius:6px; text-decoration:none; font-weight:600; font-size:13px; border:none; cursor:pointer;">Contactar por WhatsApp</a>
+       </div>
+       
+      </div><!-- Email & Web & SOCIAL MEDIA -->
       <div class="footer-section">
-       <h3>💬 Conecta con nosotros</h3>
-       <a href="mailto:support@kynedra.com" class="footer-link"> ✉️ support@kynedra.com </a> 
-       <a href="https://www.kynedra.com" target="_blank" rel="noopener noreferrer" class="footer-link"> 🌐 www.kynedra.com </a>
-
-       <!-- <h3>💬 Conecta con nosotros</h3><a href="https://mail.google.com/mail/?view=cm&to=correo@gmail.com" class="footer-link"> ✉️ Enviar correo</a> -->
-       <p style="margin-top: 1rem; font-size: 0.9rem; color: #8a8a8a;">Respuesta garantizada en 24 horas. </p>
-       <p style="margin-top: 1rem; font-size: 0.9rem; color: #8a8a8a;"> SUPPORT ONSITE & REMOTE </p>
+       <h3>💬 Conecta con nosotros</h3><a href="mailto:support@kynedra.com" class="footer-link"> ✉️ support@kynedra.com </a> <a href="https://www.kynedra.com" target="_blank" rel="noopener noreferrer" class="footer-link"> 🌐 www.kynedra.com </a> <!-- Social Media Icons -->
+       <div style="margin-top: 1.2rem; display: flex; gap: 0.5rem; align-items: center;">
+        <!-- <a href="https://www.facebook.com/profile.php?id=" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook Kynedra"> -->
+        <a href="https://www.facebook.com/profile.php?id=61588912900256" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook Kynedra">
+        
+         <svg width="32" height="32" viewbox="0 0 24 24" fill="currentColor" style="color: #1877f2;">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+         </svg></a> <a href="https://www.instagram.com/kynedra.it/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram Kynedra">
+         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="currentColor" style="color: #e4405f;" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect> <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /> <circle cx="17.5" cy="6.5" r="1.5"></circle>
+         </svg></a>
+       </div>
+       <p style="margin-top: 1rem; font-size: 0.9rem; color: #8a8a8a;">Respuesta garantizada en 24 horas.</p>
+       <p style="margin-top: 1rem; font-size: 0.9rem; background: linear-gradient(135deg, #1db584 0%, #2dd4bf 50%, #14b8a6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700; text-shadow: 0 2px 8px rgba(29, 181, 132, 0.3); letter-spacing: 0.5px;">SUPPORT ONSITE &amp; REMOTE</p>
       </div>
      </div><!-- CTA Button -->
      <div class="footer-bottom">
-      <a href="mailto:kynedra.it@gmail.com" class="cta-footer-btn"> ¡Escribeme un email y hablamos de tu proyecto! → </a> 
-      <!-- <a href="https://mail.google.com/mail/?view=cm&to=correo@gmail.com" class="cta-footer-btn">¡Escribeme un email y hablamos de tu proyecto! →</a> -->
-
+      <a href="mailto:kynedra.it@gmail.com" class="cta-footer-btn"> ¡Escribeme un email y hablamos de tu proyecto! → </a>
      </div><!-- Copyright -->
      <div class="footer-copyright">
       © 2024 Kynedra IT Consulting. Todos los derechos reservados. | Especialistas en Data &amp; Quality Assurance
@@ -1144,5 +1158,5 @@
         });
     
     </script>
-  
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f59ecd8253dcc90',t:'MTc3Nzc1NTMwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

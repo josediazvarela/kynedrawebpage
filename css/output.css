@@ -167,6 +167,9 @@
   .visible {
     visibility: visible;
   }
+  .absolute {
+    position: absolute;
+  }
   .start {
     inset-inline-start: var(--spacing);
   }
